@@ -1,0 +1,29 @@
+{
+  "name": "prima",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth0/nextjs-auth0": "^3.5.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "framer-motion": "^11.2.13",
+    "lodash": "^4.17.21",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-swipeable": "^7.0.1",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8"
+  }
+}

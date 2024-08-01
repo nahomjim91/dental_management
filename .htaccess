@@ -1,0 +1,12 @@
+# Force HTTPS redirection
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Proxy requests to the Node.js server
+RewriteCond %{REQUEST_URI} !^/node_modules/
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]
+
+# Allow access to the .well-known directory for ACME challenge (SSL certificates)
+RewriteRule ^\.well-known/acme-challenge/ - [L]

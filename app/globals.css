@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  animation: none !important;
+  transition: none !important;
+} */
+
+@layer base {
+  body {
+    @apply text-primary bg-white overflow-x-hidden;
+  }
+
+  .btn {
+    @apply md:py-[18px]  px-[50px] md:h-[66px] h-[40px] flex items-center justify-center text-base uppercase font-secondary font-semibold border border-solid border-zinc-700  text-primary hover:text-slate-200 hover:border-none hover:bg-primary transition-all duration-300;
+  }
+  
+}
+
+/* global.css or any relevant CSS file */
+.page-transition {
+  height: 100vh;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  transition: all .8s ease;
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/* gridGallery.js */
+.my-masonry-grid {
+  display: flex;
+  margin-left: 5px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 5px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.masonry-item {
+  margin-bottom: 5px;
+}
+
+.masonry-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MasonryGrid.js */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.masonry-sizer,
+.masonry-item {
+  width: 100%;
+}
+
+.custom-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #8a4f7d;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-radio:checked::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #8a4f7d;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-customPurple {
+  color: #8a4f7d;
+}
+
+.round-img-bg {
+  background: #e0e0e0;
+  box-shadow: inset 45px 45px 90px #bababa, inset -45px -45px 90px #ffffff;
+}
+.login-bg {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 35px 35px 70px #c1c1c1, -35px -35px 70px #ffffff;
+}
+
+.fslightbox-container {
+  z-index: 2000 !important;
+}
+
+/* Page transtion */
+.inner {
+  background-color: black;
+}
+
+.inner .page {
+  background-color: white;
+}
+
+.inner .slide {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
