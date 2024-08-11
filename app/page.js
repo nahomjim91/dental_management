@@ -1,16 +1,4 @@
-// export default function Home() {
-//   return (
-//     <div className="w-full h-full">
-//       {/* <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-//   <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-//   <span>Download</span>
-// </button>  */}
-//     {/*  */}
 
-//     </div>
-//   );
-// }
-// components/Dashboard.jsx
 "use client";
 import { useState } from "react";
 import { MdPeopleAlt, MdMoreVert } from "react-icons/md";
@@ -18,6 +6,7 @@ import { IoPersonSharp } from "react-icons/io5";
 import { VscRequestChanges } from "react-icons/vsc";
 
 import { DatePicker, FormatDate } from "@/componet/DatePicker";
+import Topbutton from "@/componet/Topbutton";
 export default function Home() {
   const [appointments, setAppointments] = useState([
     {
@@ -52,21 +41,14 @@ export default function Home() {
   const requests = 20;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col text-primary">
       {/* <TopHeader/> */}
       {/* Main Content */}
-      <main className="flex-1 p-8 bg-gray-100">
+      <main className="flex-1 p-8 ">
         {/*Page Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-semibold">Dashboard Overview</h2>
-          <div className="flex items-center space-x-4">
-            <div className="bg-blue-500 text-white px-4 py-2 rounded-xl">
-              Make an Appointment
-            </div>
-            <div className="bg-red-500 text-white px-4 py-2 rounded-xl">
-              Add Patient
-            </div>
-          </div>
+          <Topbutton/>
         </div>
 
         <div className="flex w-full justify-between gap-4">
@@ -190,12 +172,10 @@ export default function Home() {
                             <div className="w-10 h-10 bg-gray-200 rounded-lg"></div>
                             <div>
                               <div className="flex gap-2">
-                                <p className="font-medium">
-                                  {patient.patient}
-                                </p>
+                                <p className="font-medium">{patient.patient}</p>
                                 <span
                                   className={`${
-                                    patient.isMember ? "bg-red-500" : ""
+                                    patient.isMember ? "bg-btnSecondary" : ""
                                   } text-white text-xs px-3 m-0 flex items-center rounded-xl`}
                                 >
                                   {patient.isMember ? "Member" : ""}

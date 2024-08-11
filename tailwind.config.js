@@ -18,18 +18,16 @@ module.exports = {
       xl: "1192px",
     },
     extend: {
-        colors: {
-          primary: "#6e6e6e",
-          grey: "#484B4B",
-          accent: "#EEF7F9",
-        },     
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#04043B",
+        secondary: "#7D7E99",
+        white: "#FFFFFF",
+        btnPrimary: "#172E88",
+        btnSecondary: "#FE7D6E",
+        mainBg: "#F8FBFF",
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
 

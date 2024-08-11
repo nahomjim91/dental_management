@@ -4,13 +4,10 @@ import { FaBell } from "react-icons/fa";
 
 const TopHeader = () => {
   return (
-    <div className="w-full p-2 bg-gray-50 shadow-md ">
+    <div className=" p-2  shadow-md ">
       {/* top section */}
-      <div className="w-full flex justify-end mb-4">
-        <fieldset className="w-full space-y-1 ">
-          <label htmlFor="Search" className="hidden">
-            Search
-          </label>
+      <div className="flex justify-end mb-4">
+        <fieldset className="w-full space-y-1  ">
           <div className="relative ">
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
               <button
@@ -31,7 +28,7 @@ const TopHeader = () => {
               type="search"
               name="Search"
               placeholder="Search..."
-              className="w-32 py-2 pl-10 text-sm sm:w-auto focus:outline-none  text-gray-800 bg-gray-50 rounded-xl"
+              className="w-32 py-2 pl-10 text-sm sm:w-auto focus:outline-none  text-gray-800 bg-gray-100 rounded-xl shadow-lg"
             />
           </div>
         </fieldset>

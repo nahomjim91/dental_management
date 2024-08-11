@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['upload.primaeri.com', 'www.jules-photographer.com', 'images.pexels.com'],
+      domains: ['primaeri.com',  'images.pexels.com'],
       
     },
   };

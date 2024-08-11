@@ -20,14 +20,15 @@ export default function RootLayout({ children }) {
         /> */}
         <title>Dental mangement system</title>
       </head>
-      <body className="flex bg-gray-100 overflow-hidden">
+    <body className="flex bg-gray-100 overflow-hidden fixed w-full ">
         <SideNav />
-        <main className="w-full mt-2">
+        <main className="w-full pt-2 bg-mainBg">
           <TopHeader />
           <div className="w-full overflow-x-auto">
             <div className="sm:h-[calc(99vh-60px)] overflow-auto ">
               <div className="w-full flex justify-center mx-auto   overflow-auto h-[calc(100vh - 120px)] overflow-y-auto relative">
-                <div className="w-full md:max-w-6xl">{children}</div>
+                <div className="w-full md:max-w-6xl">      {children}
+                </div>
               </div>
             </div>
           </div>

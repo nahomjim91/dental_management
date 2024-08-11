@@ -71,8 +71,8 @@ export const DatePicker = () => {
               key={index}
               className={`flex group ${
                 isToday
-                  ? "bg-purple-300 shadow-lg"
-                  : "hover:bg-purple-100 hover:shadow-lg"
+                  ? "bg-btnPrimary shadow-lg"
+                  : "hover:bg-blue-100 hover:shadow-lg"
               } rounded-lg transition-all duration-300 cursor-pointer justify-center w-12`}
             >
               <div className="flex items-center py-1">
@@ -80,8 +80,8 @@ export const DatePicker = () => {
                   <p
                     className={`${
                       isToday
-                        ? "text-purple-900"
-                        : "text-gray-900 group-hover:text-purple-900"
+                        ? "text-white"
+                        : "text-gray-900 group-hover:text-blue-900"
                     } text-sm transition-all duration-300`}
                   >
                     {dayName}
@@ -89,8 +89,8 @@ export const DatePicker = () => {
                   <p
                     className={`${
                       isToday
-                        ? "text-purple-900 font-bold"
-                        : "text-gray-900 group-hover:text-purple-900"
+                        ? "text-white font-bold"
+                        : "text-gray-900 group-hover:text-blue-900"
                     } mt-1 text-xl transition-all duration-300`}
                   >
                     {dayNumber}
